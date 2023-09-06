@@ -1,0 +1,3 @@
+alias malias='vim ~/.aliases; source ~/.aliases'
+alias la='ls -a'
+alias tm='tmux new -A -s main'
