@@ -1,3 +1,8 @@
+
 alias malias='vim ~/.aliases; source ~/.aliases'
 alias la='ls -a'
+# always open tmux in main window
 alias tm='tmux new -A -s main'
+
+alias zshconfig='vim ~/.zshrc; source ~/.zshrc' 
+
