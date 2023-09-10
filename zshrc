@@ -72,7 +72,7 @@ ZSH_THEME="jonathan"
 # Add wisely, as too many plugins slow down shell startup.
 
 # config autosuggestion color
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=0"
 
 plugins=(
 	git
