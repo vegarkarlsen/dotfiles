@@ -5,7 +5,6 @@
 script_path="$(realpath "$0")"
 dir_path="$(dirname $script_path)"
 
-# TODO: fix backup if there allready exists 1 backupfile
 backup_file(){
 	file="$1"
 	file_name=$(basename "$file")
@@ -55,7 +54,7 @@ download_file "$HOME/.muttrc" "$dir_path/muttrc"
 download_file "$HOME/.tmux.conf" "$dir_path/tmux.conf"
 download_file "$HOME/.vimrc" "$dir_path/vimrc"
 download_file "$HOME/.zshrc" "$dir_path/zshrc"
-
+download_file "$HOME/.p10k.zsh" "$dir_path/p10k.zsh"
 
 
 

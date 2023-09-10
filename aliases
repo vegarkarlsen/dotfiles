@@ -1,9 +1,12 @@
-
+# basic aliases
 alias malias='vim ~/.aliases; source ~/.aliases'
 alias la='ls -a'
+alias zshconfig='vim ~/.zshrc; source ~/.zshrc' 
+alias ohmyzsh="cd ~/.oh-my-zsh"
+
+# vpn to ntnu
+alias vntnu="sudo openconnect vpn.ntnu.no"
+
 # always open tmux in main window
 alias tm='tmux new -A -s main'
-
-alias zshconfig='vim ~/.zshrc; source ~/.zshrc' 
-
 
