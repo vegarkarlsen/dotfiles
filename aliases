@@ -3,7 +3,7 @@ alias malias='vim ~/.aliases; source ~/.aliases'
 alias la='ls -a'
 alias zshconfig='vim ~/.zshrc; source ~/.zshrc' 
 alias ohmyzsh="cd ~/.oh-my-zsh"
-
+alias e="nautilus --browser $args"
 # vpn to ntnu
 alias vntnu="sudo openconnect vpn.ntnu.no"
 
