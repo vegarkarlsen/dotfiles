@@ -4,9 +4,12 @@ alias la='ls -a'
 alias zshconfig='vim ~/.zshrc; source ~/.zshrc' 
 alias ohmyzsh="cd ~/.oh-my-zsh"
 alias e="nautilus --browser $args"
+alias virtualenv="python3 -m virtualenv $args"
 # vpn to ntnu
 alias vntnu="sudo openconnect vpn.ntnu.no"
 
 # always open tmux in main window
 alias tm='tmux new -A -s main'
+# p10k color scheme
+alias p10k_color='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done'
 
