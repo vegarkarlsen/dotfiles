@@ -6,6 +6,8 @@ alias ohmyzsh="cd ~/.oh-my-zsh"
 alias e="nautilus --browser $args"
 # vpn to ntnu
 alias vntnu="sudo openconnect vpn.ntnu.no"
+# activate python venv
+alias activate="source venv/bin/activate"
 
 # always open tmux in main window
 alias tm='tmux new -A -s main'
