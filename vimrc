@@ -121,7 +121,6 @@ nmap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 
 " unhighlight
-nmap <leader>h :nohlsearch<cr>
 
 " jump to start/end of line with le row du maison
 map H ^
