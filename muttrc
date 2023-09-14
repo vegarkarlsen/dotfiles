@@ -18,7 +18,7 @@ set mbox_type=maildir           # Maildir
 set mbox='~/Mail'
 set record='.sent'
 set abort_unmodified                # Ignore unsaved messages
-set arrow_cursor=no                 # Use whole line as marker
+set arrow_cursor=yes                # Use whole line as marker
 set autoedit                        # Jump straight to editing message
 set bounce_delivered=no             # Don't remove delivered-to when bouncing
 set charset=utf-8                   # utf-8 ftw :-)
@@ -76,6 +76,10 @@ bind index   æ        collapse-all
 bind pager   i        display-toggle-weed
 
 bind index,pager B sidebar-toggle-visible
+
+# move in mail
+bind pager <up> next-page
+bind pager <down> previous-page
 
 # Automatic viewing of html mail, but always prefer text/plain:
 set implicit_autoview
@@ -144,5 +148,4 @@ folder-hook . 'set record="^"'
 
 #Macros
 macro index A "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "Mark all new as read"
-
 
