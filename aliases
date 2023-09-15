@@ -5,6 +5,7 @@ alias zshconfig='vim ~/.zshrc; source ~/.zshrc'
 alias ohmyzsh="cd ~/.oh-my-zsh"
 alias e="nautilus --browser $args"
 alias virtualenv="python3 -m virtualenv $args"
+alias cd..="cd .."
 # vpn to ntnu
 alias nvpn="sudo openconnect vpn.ntnu.no"
 # activate python venv
@@ -16,4 +17,6 @@ alias tm='tmux new -A -s main'
 alias p10k_color='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done'
 # easy git controll of .dotfiles folder
 alias dotfiles="git -C ~/.dotfiles $args"
+alias todo="vim ~/.todo.txt"
+
 
