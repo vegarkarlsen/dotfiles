@@ -1,11 +1,23 @@
-# basic aliases
-alias malias='vim ~/.aliases; source ~/.aliases'
-alias la='ls -a'
-alias zshconfig='vim ~/.zshrc; source ~/.zshrc' 
+# ----------------------------------------------------------------------------------------
+# alias file
+# ----------------------------------------------------------------------------------------
+
+# Quick edit
+alias zshconfig='nvim ~/.zshrc; source ~/.zshrc' 
+alias malias='nvim ~/.aliases.zsh; source ~/.aliases.zsh'
+alias todo="nvim ~/.todo.txt"
+
+# rebind vim to nvim 
+alias vim="nvim"
+alias vi="nvim"
+
+# Qucik acsess and movement
 alias ohmyzsh="cd ~/.oh-my-zsh"
 alias e="nautilus --browser $args"
-alias virtualenv="python3 -m virtualenv $args"
 alias cd..="cd .."
+alias dotfiles="git -C ~/.dotfiles $args"
+
+
 # vpn to ntnu
 alias nvpn="sudo openconnect vpn.ntnu.no"
 # activate python venv
@@ -15,8 +27,8 @@ alias activate="source venv/bin/activate"
 alias tm='tmux new -A -s main'
 # p10k color scheme
 alias p10k_color='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done'
-# easy git controll of .dotfiles folder
-alias dotfiles="git -C ~/.dotfiles $args"
-alias todo="vim ~/.todo.txt"
 
+alias virtualenv="python3 -m virtualenv $args"
+
+alias la='ls -a'
 

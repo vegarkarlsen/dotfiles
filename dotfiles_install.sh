@@ -5,7 +5,7 @@
 script_path="$(realpath "$0")"
 dir_path="$(dirname $script_path)"
 
-backup_file(){
+backup_file() {
 	file="$1"
 	file_name=$(basename "$file")
 
@@ -20,7 +20,7 @@ backup_file(){
 }
 
 # confirmation function
-download_file(){
+download_file() {
 	# get variables
 	file="$1"
 	file_sync="$2"
@@ -49,11 +49,9 @@ download_file(){
 #download_file "test2"  "test1"
 #backup_folder test1
 
-download_file "$HOME/.aliases" "$dir_path/aliases"
+download_file "$HOME/.aliases.zsh" "$dir_path/aliases"
 download_file "$HOME/.muttrc" "$dir_path/muttrc"
 download_file "$HOME/.tmux.conf" "$dir_path/tmux.conf"
 # download_file "$HOME/.vimrc" "$dir_path/vimrc"
 download_file "$HOME/.zshrc" "$dir_path/zshrc"
 download_file "$HOME/.p10k.zsh" "$dir_path/p10k.zsh"
-
-

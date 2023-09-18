@@ -25,4 +25,5 @@ cursor:
     shape: underline
     blinking: off
   
-    
+env: 
+  TERM: xterm-256color
