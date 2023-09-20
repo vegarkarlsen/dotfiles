@@ -20,17 +20,21 @@ alias dotfiles="git -C ~/.dotfiles $args"
 
 # vpn to ntnu
 alias nvpn="sudo openconnect vpn.ntnu.no"
-# activate python venv
+# easy python
+
+#alias virtualenv="python3 -m virtualenv $args"
 alias activate="source venv/bin/activate"
 
 # always open tmux in main window
 alias tm='tmux new -A -s main'
+
 # p10k color scheme
 alias p10k_color='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done'
-
-source ~/.aliases_local
-
-alias virtualenv="python3 -m virtualenv $args"
-
+# Generall aliases
 alias la='ls -a'
+
+# source local alias file if it exists
+if [ -e "$file" ]; then
+    source ~/.aliases_local
+fi
 
