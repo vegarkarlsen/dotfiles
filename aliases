@@ -33,8 +33,13 @@ alias p10k_color='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}
 # Generall aliases
 alias la='ls -a'
 
+# easy linking of dotfiles
+dotlink(){
+    ln -s "$(pwd)/$1" "$HOME/$2"
+}
+
 # source local alias file if it exists
-if [ -e "$file" ]; then
+if [ -e  "~/.aliases_local" ]; then
     source ~/.aliases_local
 fi
 
