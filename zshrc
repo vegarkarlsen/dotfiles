@@ -115,6 +115,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="vim ~/.oh-my-zsh"
 
+PROFILE="$HOME/.profile"
+if [ -e $PROFILE ]; then 
+    source $PROFILE
+fi
+
 source ~/.aliases.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
