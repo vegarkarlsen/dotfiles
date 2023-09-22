@@ -9,7 +9,7 @@ alias todo="nvim ~/.todo.txt"
 
 # rebind vim to nvim 
 alias vim="nvim"
-alias vi="nvim"
+alias vi="vim"
 
 # Qucik acsess and movement
 alias ohmyzsh="cd ~/.oh-my-zsh"
