@@ -15,7 +15,10 @@ alias vim="nvim"
 alias ohmyzsh="cd ~/.oh-my-zsh"
 alias e="nautilus --browser $args"
 alias cd..="cd .."
+
+# dotfiles
 alias dotfiles="git -C ~/.dotfiles $args"
+alias dotff="dotfiles"
 
 
 # vpn to ntnu
@@ -36,10 +39,29 @@ alias sl="ls"
 
 alias cat="batcat"
 
+alias cat="batcat"
+
 # easy linking of dotfiles
 dotlink(){
     ln -s "$(pwd)/$1" "$HOME/$2"
 }
+
+
+# lazy git
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gl="git pull"
+
+lazyg(){
+    commit_message="lazyg"    
+    if [ $1 ]; then
+        commit_message=$1
+    fi 
+    git add .; git commit -m $commit_message; git push
+}
+
+
 
 # source local alias file if it exists
 if [ -e  "~/.aliases_local" ]; then
