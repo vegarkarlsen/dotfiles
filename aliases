@@ -8,8 +8,8 @@ alias malias='nvim ~/.aliases.zsh; source ~/.aliases.zsh'
 alias todo="nvim ~/.todo.txt"
 
 # rebind vim to nvim 
-alias vim="nvim"
 alias vi="vim"
+alias vim="nvim"
 
 # Qucik acsess and movement
 alias ohmyzsh="cd ~/.oh-my-zsh"
@@ -30,8 +30,11 @@ alias tm='tmux new -A -s main'
 
 # p10k color scheme
 alias p10k_color='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done'
-# Generall aliases
+# lazy ls
 alias la='ls -a'
+alias sl="ls"
+
+alias cat="batcat"
 
 # easy linking of dotfiles
 dotlink(){
