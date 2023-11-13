@@ -394,7 +394,7 @@ bind l select-pane -R
 
 # vi mode
 bind v copy-mode
-bind P paste-buffer
+bind p paste-buffer
 
 # 24 bit color
 set -g default-terminal 'screen-256color'
@@ -433,7 +433,9 @@ tmux_conf_uninstall_plugins_on_reload=true
 # /!\ do not add run '~/.tmux/plugins/tpm/tpm'
 
 set -g @plugin 'jaclu/tmux-menus'
-
+# set -g @plugin 'dracula/tmux'
+# set -g @plugin "janoamaral/tokyo-night-tmux"
+# set -g @dracula-show-left-icon session
 # -- custom variables ----------------------------------------------------------
 
 # to define a custom #{foo} variable, define a POSIX shell function between the
