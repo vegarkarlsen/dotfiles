@@ -26,7 +26,7 @@ alias dotfiles="git -C ~/.dotfiles $args"
 alias dotf="dotfiles"
 
 # VPN - NTNU
-alias nvpn="sudo openconnect vpn.ntnu.no"
+alias nvpn="openconnect vpn.ntnu.no"
 
 # VPN - Nordnet
 alias nord="nordvpn"
