@@ -1,13 +1,18 @@
+# vim:filetype=zsh 
 # ----------------------------------------------------------------------------------------
-# alias file
+# Nice aliases to make life easier
 # ----------------------------------------------------------------------------------------
 
 # Quick edit
 alias zshconfig='nvim ~/.zshrc; source ~/.zshrc' 
 alias malias='nvim ~/.aliases.zsh; source ~/.aliases.zsh'
-alias todo="nvim ~/.todo.txt"
+# alias todo="nvim ~/.todo.txt"
 
-# rebind vim to nvim 
+# Lazy ls
+alias la='ls -a'
+alias sl="ls"
+
+# Editor
 alias vi="vim"
 alias vim="nvim"
 
@@ -16,43 +21,38 @@ alias ohmyzsh="cd ~/.oh-my-zsh"
 alias e="nautilus --browser $args"
 alias cd..="cd .."
 
-# dotfiles
+# Dotfiles
 alias dotfiles="git -C ~/.dotfiles $args"
-alias dotff="dotfiles"
+alias dotf="dotfiles"
 
-
-# vpn to ntnu
+# VPN - NTNU
 alias nvpn="sudo openconnect vpn.ntnu.no"
-# easy python
 
-#alias virtualenv="python3 -m virtualenv $args"
+# VPN - Nordnet
+alias nord="nordvpn"
+alias mesh="nordvpn mesh peer"
+
+# Soruce python venv
 alias activate="source venv/bin/activate"
 
-# always open tmux in main window
+# Always open tmux in main window
 alias tm='tmux new -A -s main'
 
-# p10k color scheme
-alias p10k_color='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done'
-# lazy ls
-alias la='ls -a'
-alias sl="ls"
+# Batcat
+alias bat="batcat"
 
-alias cat="batcat"
+# Rotate screen to normal
+alias nscreen="xrandr -o normal"
 
-alias cat="batcat"
-
-# easy linking of dotfiles
-dotlink(){
-    ln -s "$(pwd)/$1" "$HOME/$2"
-}
-
-
-# lazy git
+# Lazy git
+# Override ghost script
 alias gs="git status"
-alias ga="git add"
-alias gc="git commit"
-alias gl="git pull"
 
+# Move to trash
+trash(){ mv $@ $HOME/trash/ }
+
+
+# lazy commit
 lazyg(){
     commit_message="lazyg"    
     if [ $1 ]; then
@@ -61,10 +61,4 @@ lazyg(){
     git add .; git commit -m $commit_message; git push
 }
 
-
-
-# source local alias file if it exists
-if [ -e  "~/.aliases_local" ]; then
-    source ~/.aliases_local
-fi
 

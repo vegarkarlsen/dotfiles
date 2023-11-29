@@ -130,18 +130,19 @@ if [ -e $PROFILE ]; then
     source $PROFILE
 fi
 
-# source local alias file if it exists
-LOCAL_ALIASES="$HOME/.aliases_local"
-if [ -e  $LOCAL_ALIASES ]; then
-    source $LOCAL_ALIASES
-fi
 
+# Source aliases
 ALIASES="$HOME/.aliases.zsh"
 if [ -e  $ALIASES ]; then
     source $ALIASES
 fi
 
-# source ~/.aliases.zsh
+# Soruce local alias file if it exists. This is done after
+# normal alias file to override if nesesary
+LOCAL_ALIASES="$HOME/.aliases_local"
+if [ -e  $LOCAL_ALIASES ]; then
+    source $LOCAL_ALIASES
+fi
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
