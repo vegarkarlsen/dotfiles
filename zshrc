@@ -1,9 +1,9 @@
 
 # start tmux if ssh and not allready in one
-if [ -z "$tmux" ] && [ -n "$SSH_CONNECTION" ]; then
-    tmux new -A -s main
+if [ ! "$TMUX" ] && [ -n "$SSH_CONNECTION" ]; then
+    tmux new -A -s main 2>&1 > /dev/null
     command || exit 1
-fi 
+fi
 
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -130,9 +130,24 @@ if [ -e $PROFILE ]; then
     source $PROFILE
 fi
 
-source ~/.aliases.zsh
+# source local alias file if it exists
+LOCAL_ALIASES="$HOME/.aliases_local"
+if [ -e  $LOCAL_ALIASES ]; then
+    source $LOCAL_ALIASES
+fi
+
+ALIASES="$HOME/.aliases.zsh"
+if [ -e  $ALIASES ]; then
+    source $ALIASES
+fi
+
+# source ~/.aliases.zsh
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
