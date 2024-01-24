@@ -21,6 +21,7 @@ alias vim="nvim"
 alias ohmyzsh="cd ~/.oh-my-zsh"
 alias e="nautilus --browser $args"
 alias cd..="cd .."
+alias edit-nvim="cd ~/.config/nvim; vim . && cd -"
 
 # Dotfiles
 alias dotfiles="git -C ~/.dotfiles $args"
