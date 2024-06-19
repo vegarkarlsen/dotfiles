@@ -19,7 +19,7 @@ alias vim="nvim"
 
 # Qucik acsess and movement
 alias ohmyzsh="cd ~/.oh-my-zsh"
-alias e="nautilus --browser $args"
+alias e="nautilus $args"
 alias cd..="cd .."
 alias edit-nvim="cd ~/.config/nvim; vim . && cd -"
 
@@ -45,15 +45,19 @@ alias bat="batcat"
 
 # Rotate screen to normal
 alias nscreen="xrandr -o normal"
+
 # Django
 alias manage="python3 manage.py"
+
+alias mlab="matlab -nodesktop -nosoftwareopengl"
+
+# Move to trash
+trash(){ mv $@ $HOME/trash/ }
 
 # Lazy git
 # Override ghost script
 alias gs="git status"
 
-# Move to trash
-trash(){ mv $@ $HOME/trash/ }
 
 gtr(){
     if [ $(git rev-parse --show-toplevel) ]; then
