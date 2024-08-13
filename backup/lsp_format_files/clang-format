@@ -1,0 +1,9 @@
+
+# use 4 indent tab size
+IndentWidth: 4
+
+# comments
+AlignTrailingComments: true
+
+# CommentPragmas: "^//"  # Change comment style to //
+# CommentLine: "//"     # Change comment style to //
