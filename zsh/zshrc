@@ -132,7 +132,7 @@ fi
 
 
 # Source aliases
-ALIASES="$HOME/.aliases"
+ALIASES="$HOME/.aliases.zsh"
 if [ -e  $ALIASES ]; then
     source $ALIASES
 fi
