@@ -87,7 +87,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 
 # config autosuggestion color
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=0"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
 
 plugins=(
 	git
