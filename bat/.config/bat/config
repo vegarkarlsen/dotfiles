@@ -1,0 +1,7 @@
+# filtype: zsh
+
+# Theme
+#--theme="tokyonight_night" -p /home/hurodor/.config/bat/themes
+--theme="tokyonight_night"
+
+
