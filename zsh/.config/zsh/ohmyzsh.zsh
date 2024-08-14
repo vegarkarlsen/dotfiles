@@ -1,19 +1,9 @@
-
-# start tmux if ssh and not allready in one
-if [ ! "$TMUX" ] && [ -n "$SSH_CONNECTION" ]; then
-    tmux new -A -s main 2>&1 > /dev/null
-    command || exit 1
-fi
-
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -87,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 
 # config autosuggestion color
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=1"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
 plugins=(
 	git
@@ -119,30 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="vim ~/.zshrc"
-# alias ohmyzsh="vim ~/.oh-my-zsh"
 
-# source enviroment files
-PROFILE="$HOME/.profile"
-if [ -e $PROFILE ]; then 
-    source $PROFILE
-fi
-
-
-# Source aliases
-ALIASES="$HOME/.aliases.zsh"
-if [ -e  $ALIASES ]; then
-    source $ALIASES
-fi
-
-# Soruce local alias file if it exists. This is done after
-# normal alias file to override if nesesary
-LOCAL_ALIASES="$HOME/.aliases_local"
-if [ -e  $LOCAL_ALIASES ]; then
-    source $LOCAL_ALIASES
-fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
