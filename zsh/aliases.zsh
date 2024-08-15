@@ -18,9 +18,9 @@ alias vim="nvim"
 
 # Edit config files
 alias edit-nvim="cd $HOME/.config/nvim; $EDITOR . && cd -"
-alias edit-zenv="cd $ZDOTDIR; $EDITOR env.zsh; source env.zsh && cd -"
-alias edit-zsh="cd $ZDOTDIR; $EDITOR init.zsh; source init.zsh && cd -"
-alias edit-aliases="cd $ZDOTDIR; $EDITOR aliases.zsh; source aliases.zsh && cd -"
+alias edit-zenv="cd $HOME/.config/zsh/env.zsh; $EDITOR env.zsh; source env.zsh && cd -"
+alias edit-zsh="cd $HOME/.config/zsh/; $EDITOR init.zsh; source init.zsh && cd -"
+alias edit-aliases="cd $HOME/.config/zsh/aliases.zsh; $EDITOR aliases.zsh; source aliases.zsh && cd -"
 alias malias='edit-aliases'
 
 # Qucik acsess and movement

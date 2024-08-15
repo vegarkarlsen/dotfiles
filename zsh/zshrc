@@ -4,9 +4,9 @@ if [ ! "$TMUX" ] && [ -n "$SSH_CONNECTION" ]; then
     command || exit 1
 fi
 
-source $ZDOTDIR/ohmyzsh.zsh
-source $ZDOTDIR/env.zsh
-source $ZDOTDIR/aliases.zsh
+source $HOME/.config/zsh/env.zsh
+source $HOME/.config/zsh/ohmyzsh.zsh
+source $HOME/.config/zsh/aliases.zsh
 
 # Soruce local alias file if it exists. This is done after
 # normal alias file to override if nesesary

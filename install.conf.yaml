@@ -1,0 +1,50 @@
+- defaults:
+    link:
+      relink: true
+
+# Batcat - config
+- link:
+    ~/.config/bat:
+      create: true
+      relink: true
+      path: bat
+
+# Alacritty - config
+- link:
+    ~/.config/alacritty:
+      create: true
+      relink: true
+      path: alacritty
+ 
+# Zsh
+- shell:
+  - [git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.config/oh-my-zsh, installing oh-my-zsh]
+  - [git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.config/oh-my-zsh/custom/plugins/zsh-autosuggestions, Installing zsh-autosuggestions]
+  - [git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.config/oh-my-zsh/custom/plugins/zsh-syntax-highlighting, Installing zsh-syntax-highlighting]
+  - [git clone https://github.com/romkatv/powerlevel10k.git $HOME/.config/oh-my-zsh/custom/themes/powerlevel10k, installing powerlevel10k]
+
+- link:
+    ~/.config/zsh:
+      create: true
+      relink: true
+      path: zsh/*
+      glob: true
+      exclude: [zsh/zshrc, zsh/p10k.zsh]
+    ~/.zshrc:
+      relink: true
+      path: zsh/zshrc
+    ~/.p10k.zsh:
+      relink: true
+      path: zsh/p10k.zsh
+
+# Tmux
+- shell:
+  - [git clone https://github.com/gpakosz/.tmux.git $HOME/.config/tmux, Installing oh-my-tmux]
+  - [ln -s $HOME/.config/tmux/.tmux.conf $HOME/.config/tmux/tmux.conf, Setting up oh-my-tmux]
+
+- link:
+    ~/.config/tmux/tmux.conf.local:
+      path: tmux/tmux.conf.local
+      force: true
+
+
