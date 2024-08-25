@@ -4,7 +4,13 @@
 ### install
 
 ```
-git clone git@github.com:vegarkarlsen/dotfiles.git $HOME/.dotfiles
+git clone https://github.com/vegarkarlsen/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
 ./install
 ```
+### Change defualt shell to zsh
+
+```
+chsh -s $(which zsh)
+```
+
