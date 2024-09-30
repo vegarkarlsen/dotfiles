@@ -107,6 +107,7 @@
     per_directory_history   # Oh My Zsh per-directory-history local/global indicator
     # cpu_arch              # CPU architecture
     # time                  # current time
+    ros
     # =========================[ Line #2 ]=========================
     newline
     # ip                    # ip address and bandwidth usage for a specified network interface
@@ -1769,6 +1770,17 @@
     p10k segment -b 1 -f 3 -i '⭐' -t 'hello, %n'
   }
 
+  # Add ros distro if $ROS_DISTRO is set
+  function prompt_ros() {
+    if [ ! -v ROS_DISTRO ]; then
+        return
+    fi
+    p10k segment -t ${ROS_DISTRO} -i "󰳗 "
+  }
+  typeset -g POWERLEVEL9K_ROS_BACKGROUND=003
+  typeset -g POWERLEVEL9K_ROS_FOREGROUND=0
+
+  # TODO: Implement
   function nord_vpn_meshnet_prompt(){
   
   }
