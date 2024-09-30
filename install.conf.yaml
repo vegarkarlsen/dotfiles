@@ -29,13 +29,10 @@
       relink: true
       path: zsh/*
       glob: true
-      exclude: [zsh/zshrc, zsh/p10k.zsh]
+      exclude: [zsh/zshrc]
     ~/.zshrc:
       relink: true
       path: zsh/zshrc
-    ~/.p10k.zsh:
-      relink: true
-      path: zsh/p10k.zsh
 
 # Tmux
 - shell:
