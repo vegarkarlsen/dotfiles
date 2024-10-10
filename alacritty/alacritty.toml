@@ -1,6 +1,6 @@
 
 # Theme
-import = ["/home/hurodor/.config/alacritty/tokyo-night_tweak.toml"]
+general.import = ["/home/hurodor/.config/alacritty/tokyo-night_tweak.toml"]
 # import = ["/home/hurodor/.config/alacritty/tokyonight-moon-tweak.toml"]
 
 [font]
