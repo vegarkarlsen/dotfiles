@@ -1,1 +1,5 @@
---theme="tokyonight_night"
+# filetype: zsh
+# --theme="tokyonight_night"
+--theme="Dracula"
+
+
