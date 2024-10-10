@@ -84,6 +84,8 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
     vi-mode
+    fzf
+    # web-search
 )
 
 source $ZSH/oh-my-zsh.sh
