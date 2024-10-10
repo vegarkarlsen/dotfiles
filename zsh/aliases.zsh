@@ -7,6 +7,9 @@
 alias la='ls -a'
 alias sl="ls"
 
+# fd
+alias fd="fdfind"
+
 # Lazy git - Override ghost script
 alias gs="git status"
 
@@ -18,17 +21,18 @@ alias vim="nvim"
 
 # Edit config files
 alias edit-nvim="cd $HOME/.config/nvim; $EDITOR . && cd -"
-alias edit-zenv="cd $HOME/.config/zsh/env.zsh; $EDITOR env.zsh; source env.zsh && cd -"
-alias edit-zsh="cd $HOME/.config/zsh/; $EDITOR init.zsh; source init.zsh && cd -"
-alias edit-aliases="cd $HOME/.config/zsh/aliases.zsh; $EDITOR aliases.zsh; source aliases.zsh && cd -"
+alias edit-zenv="cd $HOME/.config/zsh; $EDITOR env.zsh; source env.zsh && cd -"
+alias edit-zsh="cd; $EDITOR .zshrc; source zshrc && cd -"
+alias edit-aliases="cd $HOME/.config/zsh; $EDITOR aliases.zsh; source aliases.zsh && cd -"
 alias malias='edit-aliases'
 
 # Qucik acsess and movement
-alias e="nautilus $args"
+open-nautilus(){
+    nautilus $1 & disown
+}
+alias e=open-nautilus
 alias cd..="cd .."
-
-# Dotfiles
-alias dotfiles="git -C ~/.dotfiles $args"
+alias dotfiles="git -C ~/.dotfiles"
 alias dotf="dotfiles"
 
 # VPN - NTNU
@@ -39,6 +43,8 @@ alias mesh="nordvpn mesh peer"
 # Python
 alias activate="source venv/bin/activate"   # virtualenv
 alias manage="python3 manage.py"            # Django
+alias conda-activate="eval $(/home/hurodor/.local/var/anaconda3/bin/conda shell.zsh hook)"
+
 
 # Always open tmux in main window
 alias tm='tmux new -A -s main'
@@ -50,5 +56,7 @@ alias bat="batcat"
 alias nscreen="xrandr -o normal"
 
 # Matlab
-alias mlab="matlab -nodesktop -nosoftwareopengl"
+alias mlab="matlab -nodesktop -nosplash -nosoftwareopengl"
 
+# zathura
+alias zat="zathura"
