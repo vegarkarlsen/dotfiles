@@ -4,8 +4,8 @@ if [ ! "$TMUX" ] && [ -n "$SSH_CONNECTION" ]; then
     command || exit 1
 fi
 
-source $HOME/.config/zsh/env.zsh
 source $HOME/.config/zsh/ohmyzsh.zsh
+source $HOME/.config/zsh/env.zsh
 source $HOME/.config/zsh/aliases.zsh
 
 # Soruce local alias file if it exists. This is done after
@@ -14,5 +14,4 @@ LOCAL_ALIASES="$HOME/.aliases_local"
 if [ -e  $LOCAL_ALIASES ]; then
     source $LOCAL_ALIASES
 fi
-
 
