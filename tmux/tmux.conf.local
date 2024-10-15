@@ -398,7 +398,7 @@ bind p paste-buffer
 
 # 24 bit color
 set -g default-terminal 'screen-256color'
-# # this will fuck up vim colors in mosh session
+# # this may fuck up vim colors in mosh session
 set -ag terminal-overrides ',alacritty:RGB'
 
 
