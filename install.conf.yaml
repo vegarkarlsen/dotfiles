@@ -19,20 +19,15 @@
 # Zsh
 - shell:
   - [git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.config/oh-my-zsh, installing oh-my-zsh]
-  - [git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.config/oh-my-zsh/custom/plugins/zsh-autosuggestions, Installing zsh-autosuggestions]
-  - [git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.config/oh-my-zsh/custom/plugins/zsh-syntax-highlighting, Installing zsh-syntax-highlighting]
-  - [git clone https://github.com/romkatv/powerlevel10k.git $HOME/.config/oh-my-zsh/custom/themes/powerlevel10k, installing powerlevel10k]
 
 - link:
-    ~/.config/zsh:
-      create: true
-      relink: true
-      path: zsh/*
-      glob: true
-      exclude: [zsh/zshrc]
-    ~/.zshrc:
-      relink: true
-      path: zsh/zshrc
+      ~/.config/zsh:
+        create: true
+        relink: true
+        path: zsh
+      ~/.zshrc:
+        relink: true
+        path: zsh/zshrc
 
 # Tmux
 - shell:
