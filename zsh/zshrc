@@ -71,8 +71,6 @@ plugins=(
 	zsh-syntax-highlighting
     vi-mode
     fzf
-    # ros-test
-    # web-search
 )
 
 source $ZSH/oh-my-zsh.sh
