@@ -2,6 +2,10 @@
     link:
       relink: true
 
+# Install all submodules
+- shell:
+    - [git submodule update --init --recursive]
+
 # Batcat - config
 - link:
     ~/.config/bat:
