@@ -1,23 +1,25 @@
 
 # Theme
-general.import = ["/home/hurodor/.config/alacritty/tokyo-night_tweak.toml"]
-# import = ["/home/hurodor/.config/alacritty/tokyonight-moon-tweak.toml"]
+[general]
+import = ["/home/hurodor/.config/alacritty/tokyo-night_tweak.toml"]
+live_config_reload = true
+
+[env]
+GTK_THEME = "Tokyonight-Dark"
+
+[window]
+startup_mode = "Windowed"
+decorations_theme_variant = "None"
+opacity = 0.9
+# decorations = "full"
+
+
+[terminal.shell]
+program = "/usr/bin/zsh"
 
 [font]
 size = 11
+# blur = true
 
-# [font.bold]
-# family = "CaskaydiaCove"
-# style = "Bold"
-#
-# [font.bold_italic]
-# family = "MesloLGS NF"
-# style = "Bold Italic"
-#
-# [font.italic]
-# family = "MesloLGS NF"
-# style = "Italic"
-#
-# [font.normal]
-# family = "MesloLGS NF"
-# style = "Regular"
+[mouse]
+hide_when_typing = true
