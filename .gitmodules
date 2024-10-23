@@ -10,3 +10,6 @@
 [submodule "zsh/themes/powerlevel10k"]
 	path = zsh/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "gnome/Tokyonight-GTK-Theme"]
+	path = gnome/Tokyonight-GTK-Theme
+	url = git@github.com:Fausto-Korpsvart/Tokyonight-GTK-Theme.git
