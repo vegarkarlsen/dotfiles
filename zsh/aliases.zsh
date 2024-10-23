@@ -48,6 +48,7 @@ alias conda-activate="eval $(/home/hurodor/.local/var/anaconda3/bin/conda shell.
 
 # Always open tmux in main window
 alias tm='tmux new -A -s main'
+alias mux='tmuxinator'
 
 # Batcat
 alias bat="batcat"
@@ -60,3 +61,4 @@ alias mlab="matlab -nodesktop -nosplash -nosoftwareopengl"
 
 # zathura
 alias zat="zathura"
+
