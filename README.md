@@ -18,5 +18,6 @@ chsh -s $(which zsh)
 
 I currently uses the patched MesloLGS NF font from powerlevel10k. The font can be downloaded direclty from the [powerlevel10k-project](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#meslo-nerd-font-patched-for-powerlevel10k) on github.
 
-## TODO:
-- Better structure on zsh config files.
+
+## Notes
+ - Gnome shell- and gtk themes currelty need to be set manually
