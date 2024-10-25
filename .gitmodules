@@ -1,15 +1,20 @@
-[submodule "dotbot"]
-	path = tools/dotbot
-	url = https://github.com/anishathalye/dotbot
 [submodule "zsh/plugins/zsh-autosuggestions"]
 	path = zsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+    branch = master
 [submodule "zsh/plugins/zsh-syntax-highlighting"]
 	path = zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+    branch = master
 [submodule "zsh/themes/powerlevel10k"]
 	path = zsh/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+    branch = master
 [submodule "gnome/Tokyonight-GTK-Theme"]
 	path = gnome/Tokyonight-GTK-Theme
     url = https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme.git
+    btanch = master
+[submodule "tools/dotbot"]
+	path = tools/dotbot
+	url = git@github.com:anishathalye/dotbot.git
+	branch = master
