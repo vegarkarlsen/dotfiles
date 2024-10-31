@@ -4,14 +4,11 @@
 import = ["/home/hurodor/.config/alacritty/tokyo-night_tweak.toml"]
 live_config_reload = true
 
-[env]
-GTK_THEME = "Tokyonight-Dark"
-
 [window]
 startup_mode = "Windowed"
 decorations_theme_variant = "None"
+decorations = "Full"
 opacity = 0.9
-# decorations = "full"
 
 
 [terminal.shell]
@@ -23,3 +20,14 @@ size = 11
 
 [mouse]
 hide_when_typing = true
+
+[selection]
+save_to_clipboard = false
+
+[font.normal]
+family = "MesloLGS NF"
+style = "Regular"
+
+[bell]
+command = "None"
+
