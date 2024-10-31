@@ -71,6 +71,7 @@ plugins=(
 	zsh-syntax-highlighting
     vi-mode
     fzf
+    github
 )
 
 # Change cache folder
