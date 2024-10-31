@@ -1,4 +1,4 @@
-# vim:filetype=zsh 
+# vim:filetype=zsh
 # ----------------------------------------------------------------------------------------
 # Nice aliases to make life easier
 # ----------------------------------------------------------------------------------------
@@ -34,6 +34,7 @@ alias e=open-nautilus
 alias cd..="cd .."
 alias dotfiles="git -C ~/.dotfiles"
 alias dotf="dotfiles"
+alias lbin="$HOME/.local/bin"
 
 # VPN - NTNU
 alias nvpn="openconnect vpn.ntnu.no"
@@ -57,8 +58,11 @@ alias bat="batcat"
 alias nscreen="xrandr -o normal"
 
 # Matlab
-alias mlab="matlab -nodesktop -nosplash -nosoftwareopengl"
+alias mlab="start-matlab -nodesktop -nosplash -nosoftwareopengl"
 
 # zathura
 alias zat="zathura"
+
+# copy/paste
+alias clip="xclip -selection clipboard"
 
