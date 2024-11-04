@@ -43,4 +43,11 @@
       path: tmux/tmux.conf.local
       force: true
 
+# tig
+- link:
+    ~/.config/tig/config:
+      create: true
+      relink: true
+      path: git/tigrc
 
+    

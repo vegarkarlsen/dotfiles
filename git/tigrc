@@ -1,0 +1,6 @@
+
+# Rebind <shift-S> to view-stash (Overrides view-status)
+bind generic S view-stash
+
+# bind y to yank-comit hash (Overrides view-stash)
+bind generic y !sh -c "echo -n %(commit) | xclip -selection c && echo Copied %(commit) to clipboard"
