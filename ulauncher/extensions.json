@@ -1,0 +1,51 @@
+{
+    "com.github.plibither8.ulauncher-nordvpn": {
+        "id": "com.github.plibither8.ulauncher-nordvpn",
+        "url": "https://github.com/plibither8/ulauncher-nordvpn",
+        "updated_at": "2024-08-12T15:04:20.206943",
+        "last_commit": "fda9689bc25489a408b968f40df1ee41812a92d6",
+        "last_commit_time": "2021-05-25T05:36:34"
+    },
+    "com.github.tchar.ulauncher-albert-calculate-anything": {
+        "id": "com.github.tchar.ulauncher-albert-calculate-anything",
+        "url": "https://github.com/tchar/ulauncher-albert-calculate-anything",
+        "updated_at": "2024-08-12T15:04:22.619646",
+        "last_commit": "037965a44e6f6f496e7ad71ec1651b9edfcde32d",
+        "last_commit_time": "2024-05-29T21:57:26"
+    },
+    "com.github.isacikgoz.ukill": {
+        "id": "com.github.isacikgoz.ukill",
+        "url": "https://github.com/isacikgoz/ukill",
+        "updated_at": "2024-08-12T15:04:24.025041",
+        "last_commit": "bc50d9f41d46b6813a5aeebddd15734dcdb9d8db",
+        "last_commit_time": "2019-05-28T18:30:00"
+    },
+    "com.github.friday.ulauncher-gnome-settings": {
+        "id": "com.github.friday.ulauncher-gnome-settings",
+        "url": "https://github.com/friday/ulauncher-gnome-settings",
+        "updated_at": "2024-08-12T15:04:25.768269",
+        "last_commit": "58aa3c1e90d46007b0bbbae5bfbd5093b527032f",
+        "last_commit_time": "2023-11-25T22:40:04"
+    },
+    "com.github.pywkm.ulauncher-spotify": {
+        "id": "com.github.pywkm.ulauncher-spotify",
+        "url": "https://github.com/pywkm/ulauncher-spotify",
+        "updated_at": "2024-08-12T15:04:27.400445",
+        "last_commit": "89d9b02316aaccea0d70b458bb97b3976287f03e",
+        "last_commit_time": "2020-02-17T16:20:21"
+    },
+    "com.github.ulauncher.ulauncher-hash": {
+        "id": "com.github.ulauncher.ulauncher-hash",
+        "url": "https://github.com/Ulauncher/ulauncher-hash",
+        "updated_at": "2024-08-12T15:04:29.215346",
+        "last_commit": "237dbb3610ff04df993c3223b12df42cb7df221f",
+        "last_commit_time": "2022-09-04T14:29:55"
+    },
+    "com.github.brpaz.ulauncher-shortcuts": {
+        "id": "com.github.brpaz.ulauncher-shortcuts",
+        "url": "https://github.com/brpaz/ulauncher-shortcuts",
+        "updated_at": "2024-08-12T15:04:31.516577",
+        "last_commit": "8f226b0cbe744221ce441cd09853b0abe06e78fd",
+        "last_commit_time": "2022-02-05T15:11:07"
+    }
+}
