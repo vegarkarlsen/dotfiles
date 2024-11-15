@@ -1,4 +1,56 @@
-# tmux config file
+#===============================================================================
+# TMUX CONFIG FILE
+#===============================================================================
+
+# Use 24 bit color
+set -g default-terminal 'screen-256color'
+# This may fuck up vim colors in mosh session
+set -ag terminal-overrides ',alacritty:RGB'
+
+set -g mouse on
+
+setw -g xterm-keys on
+set -s escape-time 10                     # faster command sequences
+set -sg repeat-time 600                   # increase repeat timeout
+set -s focus-events on
+
+set -g prefix2 C-a                        # GNU-Screen compatible prefix
+bind C-a send-prefix -2
+
+set -g history-limit 5000                 # boost history
+
+# enable vi copy-mode
+set -g status-keys vi
+setw -g mode-keys vi
+
+#===============================================================================
+# KEYBINDINGS
+#===============================================================================
+
+# split panes using | and -
+bind | split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+unbind '"'
+unbind %
+
+# move between split windows
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @vim_navigator_mapping_left "C-Left C-h"  # use C-h and C-Left
+set -g @vim_navigator_mapping_right "C-Right C-l"
+set -g @vim_navigator_mapping_up "C-k"
+set -g @vim_navigator_mapping_down "C-j"
+set -g @vim_navigator_mapping_prev ""  # removes the C-\ binding
+# bind j select-pane -D
+# bind k select-pane -U
+# bind h select-pane -L
+# bind l select-pane -R
+
+# vi mode
+bind v copy-mode
+bind P paste-buffer
+
+# Theme
+source-file ~/.local/share/nvim/lazy/tokyonight.nvim/extras/tmux/tokyonight_moon.tmux
 
 #===============================================================================
 # PLUGINS (more plugins can be found on https://github.com/tmux-plugins/list)
@@ -9,8 +61,8 @@ set -g @plugin 'tmux-plugins/tpm'
 # nicer keymapppings
 set -g @plugin 'tmux-plugins/tmux-sensible'
 
-# Themes: 
-set -g @plugin "janoamaral/tokyo-night-tmux"
+# Themes:
+# set -g @plugin "janoamaral/tokyo-night-tmux"
 # set -g @plugin 'odedlaz/tmux-onedark-theme'
 #set -g @plugin 'erikw/tmux-powerline'
 # set -g @plugin 'nordtheme/tmux'
@@ -28,51 +80,9 @@ set -g @plugin 'tmux-plugins/tmux-yank'
 # set -g @plugin 'Morantron/tmux-fingers'
 # run-shell "$HOME/.tmux/plugins/tmux-fingers/tmux-fingers.tmux"
 
+setenv -g TMUX_PLUGIN_MANAGER_PATH "$HOME/.config/tmux/plugins/"
+if "test ! -d ~/.tmux/plugins/tpm" \
+   "run 'git clone https://github.com/tmux-plugins/tpm $TMUX_PLUGIN_MANAGER_PATH/tpm && $TMUX_PLUGIN_MANAGER_PATH/tpm/bin/install_plugins'"
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run -b '$TMUX_PLUGIN_MANAGER_PATH/tpm/tpm'
 
-#===============================================================================
-# KEYBINDINGS
-#===============================================================================
-
-# split panes using | and -
-bind | split-window -h -c "#{pane_current_path}"
-bind - split-window -v -c "#{pane_current_path}"
-unbind '"'
-unbind %
-
-# move between split windows
-bind j select-pane -D 
-bind k select-pane -U 
-bind h select-pane -L 
-bind l select-pane -R 
-
-# vi mode
-bind v copy-mode
-bind P paste-buffer
-
-#===============================================================================
-# SETTINGS
-#===============================================================================
-#set -g @themepack 'powerline/default/orange' 
-
-# 24 bit color
-# set -g default-terminal 'screen-256color'
-# # this will fuck up vim colors in mosh session
-set -g default-terminal 'xterm-256color'
-
-set -ag terminal-overrides ',alacritty:RGB'
-
-# # this will fuck up vim colors in mosh session
-# set -ag terminal-overrides ',xterm-256color:RGB'
-
-# fix esc + j, esc + k in vim
-set -s escape-tim 0
-
-# enable vi copy-mode
-setw -g mode-keys vi
-
-# tmux-fingers
-
-
-# Initialize tmux plugin manager ( keep this line at the bottom of tmux.conf
-
-run '~/.tmux/plugins/tpm/tpm'
