@@ -1,0 +1,18 @@
+# vim:filetype=.gitconfig
+[init]
+	defaultBranch = main
+[config "pull"]
+	rebase = true
+[pull]
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[core]
+    pager = delta
+
+[include]
+    path = ~/.config/git/config.local

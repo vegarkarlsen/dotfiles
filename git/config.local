@@ -1,0 +1,5 @@
+# vim:filetype=.gitconfig
+[user]
+	email = ""
+	name = ""
+
