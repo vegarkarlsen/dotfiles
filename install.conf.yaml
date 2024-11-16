@@ -62,6 +62,7 @@
       relink: true
       path: ulauncher
 
+# Zathura
 - link:
     ~/.config/zathura:
       create: true
