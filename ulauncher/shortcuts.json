@@ -34,7 +34,7 @@
         "name": "Github",
         "keyword": "git",
         "cmd": "https://github.com/search?q=%s",
-        "icon": "~/Pictures/Screenshots/github_logo.png",
+        "icon": "~/.local/share/ulauncher/media/GitHub_icon_blue.png",
         "is_default_search": false,
         "run_without_argument": false,
         "added": 1697542424.3004193
@@ -44,7 +44,7 @@
         "name": "DuckDuckGO",
         "keyword": "d",
         "cmd": "https://duckduckgo.com/%s",
-        "icon": null,
+        "icon": "~/.local/share/ulauncher/media/DuckDuckGo_icon.png",
         "is_default_search": false,
         "run_without_argument": false,
         "added": 1700179534.8177984
