@@ -1,0 +1,5 @@
+
+# Theme
+include themes/tokyonight_moon.zathurarc
+
+# Consider using zathuraconf: https://github.com/gennaro-tedesco/zathuraconf
