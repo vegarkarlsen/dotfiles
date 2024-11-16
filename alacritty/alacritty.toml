@@ -1,7 +1,8 @@
 
 # Theme
 [general]
-import = ["/home/hurodor/.config/alacritty/tokyo-night_tweak.toml"]
+import = ["~/.config/alacritty/tokyo-night_tweak.toml"]
+# import = ["~/.local/share/nvim/lazy/tokyonight.nvim/extras/alacritty/tokyonight_moon.toml"]
 live_config_reload = true
 
 [window]
@@ -9,6 +10,13 @@ startup_mode = "Windowed"
 decorations_theme_variant = "None"
 decorations = "Full"
 opacity = 0.9
+
+# [window.padding]
+# x = 10
+# y = 10
+
+[colors]
+# draw_bold_text_with_bright_colors = true
 
 
 [terminal.shell]
@@ -18,11 +26,11 @@ program = "/usr/bin/zsh"
 size = 11
 # blur = true
 
-[mouse]
-hide_when_typing = true
+# [mouse]
+# hide_when_typing = true
 
 [selection]
-save_to_clipboard = false
+save_to_clipboard = true
 
 [font.normal]
 family = "MesloLGS NF"
@@ -30,4 +38,3 @@ style = "Regular"
 
 [bell]
 command = "None"
-
