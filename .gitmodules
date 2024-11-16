@@ -18,3 +18,6 @@
 	path = tools/dotbot
 	url = git@github.com:anishathalye/dotbot.git
 	branch = master
+[submodule "tokyonight.nvim"]
+	path = tokyonight.nvim
+	url = git@github.com:folke/tokyonight.nvim.git
