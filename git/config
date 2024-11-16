@@ -15,4 +15,9 @@
     pager = delta
 
 [include]
+    path = ~/.local/share/tokyonight.nvim/extras/delta/tokyonight_moon.gitconfig
+[delta]
+    syntax-theme = tokyonight_moon
+
+[include]
     path = ~/.config/git/config.local
