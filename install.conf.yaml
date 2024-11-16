@@ -41,21 +41,21 @@
       path: tmux/tmux.conf.local
       force: true
 
-# tig
+# Tig
 - link:
     ~/.config/tig/config:
       create: true
       relink: true
       path: tig/config
 
-# git
+# Git
 - link:
     ~/.config/git:
       create: true
       relink: true
       path: git
 
-# ulancher
+# Ulancher
 - link:
     ~/.config/ulauncher:
       create: true
