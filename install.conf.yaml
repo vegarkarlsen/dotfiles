@@ -23,7 +23,6 @@
 # Zsh
 - shell:
   - [git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.config/oh-my-zsh, installing oh-my-zsh]
-
 - link:
       ~/.config/zsh:
         create: true
@@ -37,7 +36,6 @@
 - shell:
   - [git clone https://github.com/gpakosz/.tmux.git $HOME/.config/tmux, Installing oh-my-tmux]
   - [ln -s $HOME/.config/tmux/.tmux.conf $HOME/.config/tmux/tmux.conf, Setting up oh-my-tmux]
-
 - link:
     ~/.config/tmux/tmux.conf.local:
       path: tmux/tmux.conf.local
@@ -48,6 +46,19 @@
     ~/.config/tig/config:
       create: true
       relink: true
-      path: git/tigrc
+      path: tig/config
 
+# git
+- link:
+    ~/.config/git:
+      create: true
+      relink: true
+      path: git
+
+# ulancher
+- link:
+    ~/.config/ulauncher:
+      create: true
+      relink: true
+      path: ulauncher
     
