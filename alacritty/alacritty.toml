@@ -1,23 +1,18 @@
 
 # Theme
 [general]
-import = ["~/.config/alacritty/tokyo-night_tweak.toml"]
-# import = ["~/.local/share/nvim/lazy/tokyonight.nvim/extras/alacritty/tokyonight_moon.toml"]
+import = ["~/.config/alacritty/themes/tokyo-night_tweak.toml"]
+# import = ["~/.local/share/tokyonight.nvim/extras/alacritty/tokyonight_moon.toml"]
 live_config_reload = true
 
 [window]
 startup_mode = "Windowed"
 decorations_theme_variant = "None"
-decorations = "Full"
-opacity = 0.9
-
-# [window.padding]
-# x = 10
-# y = 10
+decorations = "none"
+opacity = 0.8
 
 [colors]
 # draw_bold_text_with_bright_colors = true
-
 
 [terminal.shell]
 program = "/usr/bin/zsh"
@@ -38,3 +33,4 @@ style = "Regular"
 
 [bell]
 command = "None"
+duration = 0
