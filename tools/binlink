@@ -3,16 +3,16 @@
 LOCAL_BIN="$HOME/.local/bin"
 
 binlink (){
-    if [ -f $1 ]; then
-        ln -s $(pwd)/$1 $LOCAL_BIN/$2
+    if [ -f "$1" ]; then
+        ln -s "$(pwd)/$1" "$LOCAL_BIN/$2" -i
     fi
 }
 
 FILE_NAME=$(basename "$1")
 if [ -n "$2" ]; then
-    FILE_NAME=$2
+    FILE_NAME="$2"
 fi
 
 echo "Installing $1 to $LOCAL_BIN/$FILE_NAME"
-binlink $1 $FILE_NAME
+binlink "$1" "$FILE_NAME"
 
