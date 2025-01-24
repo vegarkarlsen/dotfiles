@@ -27,13 +27,6 @@
         "last_commit": "58aa3c1e90d46007b0bbbae5bfbd5093b527032f",
         "last_commit_time": "2023-11-25T22:40:04"
     },
-    "com.github.pywkm.ulauncher-spotify": {
-        "id": "com.github.pywkm.ulauncher-spotify",
-        "url": "https://github.com/pywkm/ulauncher-spotify",
-        "updated_at": "2024-08-12T15:04:27.400445",
-        "last_commit": "89d9b02316aaccea0d70b458bb97b3976287f03e",
-        "last_commit_time": "2020-02-17T16:20:21"
-    },
     "com.github.ulauncher.ulauncher-hash": {
         "id": "com.github.ulauncher.ulauncher-hash",
         "url": "https://github.com/Ulauncher/ulauncher-hash",
@@ -47,5 +40,61 @@
         "updated_at": "2024-08-12T15:04:31.516577",
         "last_commit": "8f226b0cbe744221ce441cd09853b0abe06e78fd",
         "last_commit_time": "2022-02-05T15:11:07"
+    },
+    "com.github.eckhoff42.ulauncher-bluetooth-quick-connect": {
+        "id": "com.github.eckhoff42.ulauncher-bluetooth-quick-connect",
+        "url": "https://github.com/Eckhoff42/Ulauncher-Bluetooth-quick-connect",
+        "updated_at": "2024-11-29T12:47:18.831286",
+        "last_commit": "2cb1d85cdfa870888e3eeda733b63467b0966ad1",
+        "last_commit_time": "2022-05-10T15:18:43"
+    },
+    "com.github.mastdiekin.ulauncher-pypi-search": {
+        "id": "com.github.mastdiekin.ulauncher-pypi-search",
+        "url": "https://github.com/mastdiekin/ulauncher-pypi-search",
+        "updated_at": "2024-11-29T12:50:12.166178",
+        "last_commit": "3527a6c21b212ba2dac83824d107f1cc15a29971",
+        "last_commit_time": "2022-01-01T02:42:56"
+    },
+    "com.github.ikorjefocur.ulauncher-commandrunner": {
+        "id": "com.github.ikorjefocur.ulauncher-commandrunner",
+        "url": "https://github.com/IkorJefocur/ulauncher-commandrunner",
+        "updated_at": "2024-11-29T12:50:28.636504",
+        "last_commit": "c306301468cbaba23625bf0ef0639b7ad6602783",
+        "last_commit_time": "2022-03-01T19:34:35"
+    },
+    "com.github.ahaasler.ulauncher-tmux": {
+        "id": "com.github.ahaasler.ulauncher-tmux",
+        "url": "https://github.com/ahaasler/ulauncher-tmux",
+        "updated_at": "2024-11-29T12:51:32.471628",
+        "last_commit": "dd631a2e5a1d8bf2ab21095b43afe068443f02b9",
+        "last_commit_time": "2021-06-05T16:42:59"
+    },
+    "com.github.sergius02.ulauncher-apty": {
+        "id": "com.github.sergius02.ulauncher-apty",
+        "url": "https://github.com/sergius02/ulauncher-apty",
+        "updated_at": "2024-11-29T12:52:52.644395",
+        "last_commit": "787a268ae3c51f054b8299d995ab4e480b06839d",
+        "last_commit_time": "2021-02-05T16:28:19"
+    },
+    "com.github.manahter.ulauncher-translate": {
+        "id": "com.github.manahter.ulauncher-translate",
+        "url": "https://github.com/manahter/ulauncher-translate",
+        "updated_at": "2024-11-29T12:53:53.928470",
+        "last_commit": "f81d32c583c7e3542bdba655e991a56e6d9a2c28",
+        "last_commit_time": "2021-04-09T18:12:40"
+    },
+    "com.github.brpaz.ulauncher-docker": {
+        "id": "com.github.brpaz.ulauncher-docker",
+        "url": "https://github.com/brpaz/ulauncher-docker",
+        "updated_at": "2024-11-29T12:56:59.000753",
+        "last_commit": "fdd7f05aa259d9bbe7bab218e9c66068edd1c46e",
+        "last_commit_time": "2022-06-14T10:49:26"
+    },
+    "com.github.the-lay.ulauncher-spotify-api": {
+        "id": "com.github.the-lay.ulauncher-spotify-api",
+        "url": "https://github.com/the-lay/ulauncher-spotify-api",
+        "updated_at": "2024-11-29T12:57:21.569645",
+        "last_commit": "7ffedbe72ea62f797d13be5dd90472ce26b7eb3d",
+        "last_commit_time": "2023-07-29T09:23:34"
     }
 }

@@ -48,5 +48,15 @@
         "is_default_search": false,
         "run_without_argument": false,
         "added": 1700179534.8177984
+    },
+    "ed85d3ec-fa06-4764-98eb-e1d80313da5e": {
+        "id": "ed85d3ec-fa06-4764-98eb-e1d80313da5e",
+        "name": "ChatGPT",
+        "keyword": "chat",
+        "cmd": "https://chatgpt.com/",
+        "icon": "~/.local/share/ulauncher/media/openai_chatgpt_icon.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1732823744.0488305
     }
 }
