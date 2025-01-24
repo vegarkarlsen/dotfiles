@@ -58,7 +58,7 @@ alias bat="batcat"
 alias nscreen="xrandr -o normal"
 
 # Matlab
-alias mlab="start-matlab -nodesktop -nosplash -nosoftwareopengl"
+alias mlab="start-matlab -nodesktop -nosplash -nosoftwareopengl -logfile $HOME/.local/var/log/matlab.log"
 
 # zathura
 alias zat="zathura"
