@@ -89,8 +89,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Soruce local alias file if it exists. This is done after normal alias-file
 # to override if nesesary
-LOCAL_ALIASES="$HOME/.aliases_local"
-if [ -e  $LOCAL_ALIASES ]; then
+export LOCAL_ALIASES="$HOME/.aliases_local"
+if [ -e $LOCAL_ALIASES ]; then
     source $LOCAL_ALIASES
 fi
 

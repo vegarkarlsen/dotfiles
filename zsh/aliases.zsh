@@ -24,7 +24,10 @@ alias edit-nvim="cd $HOME/.config/nvim; $EDITOR . && cd -"
 alias edit-zenv="cd $HOME/.config/zsh; $EDITOR env.zsh; source env.zsh && cd -"
 alias edit-zsh="cd; $EDITOR .zshrc; source zshrc && cd -"
 alias edit-aliases="cd $HOME/.config/zsh; $EDITOR aliases.zsh; source aliases.zsh && cd -"
+alias edit-local-aliases="$EDITOR $LOCAL_ALIASES && source $LOCAL_ALIASES"
+
 alias malias='edit-aliases'
+alias maliasl="edit-local-aliases"
 
 # Qucik acsess and movement
 open-nautilus(){
