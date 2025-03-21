@@ -47,7 +47,6 @@ alias mesh="nordvpn mesh peer"
 # Python
 alias activate="source venv/bin/activate"   # virtualenv
 alias manage="python3 manage.py"            # Django
-alias conda-activate="eval $(/home/hurodor/.local/var/anaconda3/bin/conda shell.zsh hook)"
 
 
 # Always open tmux in main window
