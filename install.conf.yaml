@@ -32,6 +32,13 @@
         relink: true
         path: zsh/zshrc
 
+# Starship
+- link:
+      ~/.config/starship.toml:
+        create: true
+        relink: true
+        path: starship/starship.toml
+
 # Tmux
 - shell:
   - [git clone https://github.com/gpakosz/.tmux.git $HOME/.config/tmux, Installing oh-my-tmux]
