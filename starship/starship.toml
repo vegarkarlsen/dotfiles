@@ -21,9 +21,24 @@
 # format = "[ $output ]($style)"
 # shell =["bash"]
 
+add_newline = false
 
 format = """
-$os$all
+$os\
+$directory\
+$git_branch\
+$git_status\
+$hostname\
+$line_break\
+$character
+"""
+
+right_format = """
+$status\
+$python\
+$docker_context\
+$golang\
+$container\
 """
 
 [git_status]
@@ -172,6 +187,7 @@ symbol = "🪺 "
 
 [python]
 symbol = " "
+detect_extensions = [ ]
 
 [rlang]
 symbol = "󰟔 "
