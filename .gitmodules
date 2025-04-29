@@ -16,8 +16,11 @@
     btanch = master
 [submodule "tools/dotbot"]
 	path = tools/dotbot
-	url = git@github.com:anishathalye/dotbot.git
+	; url = git@github.com:anishathalye/dotbot.git
+    url = https://github.com/anishathalye/dotbot.git
+
 	branch = master
 [submodule "tokyonight.nvim"]
 	path = tokyonight.nvim
-	url = git@github.com:folke/tokyonight.nvim.git
+	; url = git@github.com:folke/tokyonight.nvim.git
+	url = https://@github.com/folke/tokyonight.nvim.git
