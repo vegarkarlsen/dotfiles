@@ -21,3 +21,6 @@
 
 [include]
     path = ~/.config/git/config.local
+
+[alias]
+    init-tex = "!f() { git init; cp $HOME/.dotfiles/git/templates/latex.gitignore .gitignore; }; f"
