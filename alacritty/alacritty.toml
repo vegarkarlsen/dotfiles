@@ -16,8 +16,8 @@ padding.y = 1
 [colors]
 # draw_bold_text_with_bright_colors = true
 
-[terminal.shell]
-program = "/usr/bin/zsh"
+# [terminal.shell]
+# program = "/usr/bin/zsh"
 
 [font]
 size = 11
