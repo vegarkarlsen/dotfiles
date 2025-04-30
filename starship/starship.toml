@@ -30,7 +30,7 @@ $git_branch\
 $git_status\
 $hostname\
 $line_break\
-$character
+$character\
 """
 
 right_format = """
@@ -39,7 +39,16 @@ $python\
 $docker_context\
 $golang\
 $container\
+$custom\
 """
+
+# Show which ROS distro when ROS is activated
+[custom.ros]
+command = "echo $ROS_DISTRO"
+when = "test $ROS_VERSION"
+format = "[󰳗 \\[$output\\]]($style)"
+style = "bold yellow"
+
 
 [git_status]
 untracked = '[ $count](bold yellow) '
@@ -188,6 +197,7 @@ symbol = "🪺 "
 [python]
 symbol = " "
 detect_extensions = [ ]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
 [rlang]
 symbol = "󰟔 "
