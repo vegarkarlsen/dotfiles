@@ -91,4 +91,8 @@ if [ -e $LOCAL_ALIASES ]; then
     source $LOCAL_ALIASES
 fi
 
+# Remove the (virtualenv-name) in the start of the shell prompt when activating
+# virtualenvs. This is in the starship config
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
 eval "$(starship init zsh)"
