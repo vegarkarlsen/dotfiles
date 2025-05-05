@@ -7,4 +7,5 @@ export GOPATH="$HOME/.local/share/go"
 # Add to path
 export PATH="$HOME/.local/bin:$PATH"
 
-
+# Starship config file
+STARSHIP_CONFIG="$HOME/.config/starship.toml"

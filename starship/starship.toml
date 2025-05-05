@@ -29,6 +29,7 @@ $directory\
 $git_branch\
 $git_status\
 $hostname\
+$fill\
 $line_break\
 $character\
 """
@@ -37,8 +38,8 @@ right_format = """
 $status\
 $python\
 $docker_context\
-$golang\
 $container\
+$golang\
 $custom\
 """
 
@@ -46,8 +47,11 @@ $custom\
 [custom.ros]
 command = "echo $ROS_DISTRO"
 when = "test $ROS_VERSION"
-format = "[󰳗 \\[$output\\]]($style)"
-style = "bold yellow"
+format = """[󱎕](fg:black)\
+[󰳗 $output]($style)\
+[](fg:black)
+"""
+style = "fg:bold yellow bg:black"
 
 
 [git_status]
@@ -86,7 +90,10 @@ symbol = " "
 symbol = " "
 
 [directory]
+# format = "$path "
+format = '[$path]($style)[$read_only]($read_only_style) '
 read_only = " 󰌾"
+style = "fg:bold bright-blue"
 
 [docker_context]
 symbol = " "
@@ -102,6 +109,8 @@ symbol = " "
 
 [git_branch]
 symbol = " "
+style = "fg:purple"
+format = "[$symbol$branch(:$remote_branch)]($style) "
 
 [golang]
 symbol = " "
@@ -143,8 +152,9 @@ symbol = " "
 symbol = " "
 
 [os]
-format = "[$symbol]($style)"
-style = "dimmed blue"
+format = " [$symbol]($style)"
+# style = "dimmed blue"
+style = "fg:bold yellow"
 disabled = false
 
 [os.symbols]
@@ -194,10 +204,19 @@ symbol = "󰏗 "
 [pijul_channel]
 symbol = "🪺 "
 
+# format = """[󱎕](fg:black)\
+# [󰳗 $output]($style)\
+# [](fg:black)
+# """
 [python]
 symbol = " "
 detect_extensions = [ ]
-format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+format = """[󱎕](fg:blue)\
+[${symbol}${pyenv_prefix}(${version} )($virtualenv )]($style)\
+[](fg:blue)
+"""
+# format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+style = "fg:bright-white bg:blue"
 
 [rlang]
 symbol = "󰟔 "
