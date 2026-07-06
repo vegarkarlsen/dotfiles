@@ -389,17 +389,18 @@ bind - split-window -v -c "#{pane_current_path}"
 unbind '"'
 unbind %
 
-set -g @plugin 'christoomey/vim-tmux-navigator'
-set -g @vim_navigator_mapping_left "C-Left C-h"  # use C-h and C-Left
-set -g @vim_navigator_mapping_right "C-Right C-l"
-set -g @vim_navigator_mapping_up "C-k"
-set -g @vim_navigator_mapping_down "C-j"
-set -g @vim_navigator_mapping_prev ""  # removes the C-\ binding
+# Tmux navigator
+# set -g @vim_navigator_mapping_prev ""  # removes the C-\ binding
+# set -g @plugin 'christoomey/vim-tmux-navigator'
+# set -g @vim_navigator_mapping_left "C-Left C-h"  # use C-h and C-Left
+# set -g @vim_navigator_mapping_right "C-Right C-l"
+# set -g @vim_navigator_mapping_up "C-k"
+# set -g @vim_navigator_mapping_down "C-j"
 # move between split windows
-# bind j select-pane -D
-# bind k select-pane -U
-# bind h select-pane -L
-# bind l select-pane -R
+bind j select-pane -D
+bind k select-pane -U
+bind h select-pane -L
+bind l select-pane -R
 
 # vi mode
 bind v copy-mode
@@ -421,6 +422,10 @@ bind -n M-7 select-window -t 7
 bind -n M-8 select-window -t 8
 bind -n M-9 select-window -t 9
 
+# Swap windows
+unbind .
+bind . command-prompt -p "Swap window with index:" "swap-window -t '%%'"
+# bind -n . swap-window -s '' -t 
 
 # -- tpm -----------------------------------------------------------------------
 

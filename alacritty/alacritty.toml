@@ -2,6 +2,7 @@
 # Theme
 [general]
 import = ["~/.config/alacritty/themes/tokyo-night_tweak.toml"]
+# import = ["~/.config/alacritty/themes/alabaster.toml"]
 # import = ["~/.local/share/tokyonight.nvim/extras/alacritty/tokyonight_moon.toml"]
 live_config_reload = true
 

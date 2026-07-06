@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+
+import argparse
+import os
+import subprocess as sp
+from pathlib import Path
+
+LOCAL_BIN=Path.home().joinpath(".local/bin")
+
+def link(src, dest):
+    pwd = Path.cwd()
+    command = ["ln", "-s", pwd.joinpath(src), LOCAL_BIN.joinpath(dest)]
+    print("".join(command))
+
+
+if __name__ == '__main__':
+    pass
+
+
+
+
+
+
+
+
