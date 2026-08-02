@@ -14,8 +14,7 @@ export ZSH="$HOME/.config/oh-my-zsh"
 # Path to custom folder
 export ZSH_CUSTOM="$HOME/.config/zsh"
 
-# Set name of the theme to load
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+# Theme is handled by starship instead (see starship/starship.toml)
 ZSH_THEME=""
 
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
