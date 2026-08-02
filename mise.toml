@@ -4,9 +4,13 @@
 # resolve against the literal path mise was invoked with, which breaks once this file is
 # reached via the ~/.config/mise/config.toml symlink.
 #
-# For a machine-only tool that shouldn't show up as a repo diff, use
-# `mise use -g --env local <tool>` instead of `mise use -g` - it writes to the
-# gitignored mise.local.toml instead of this file.
+# For a machine-only tool that shouldn't show up as a repo diff, add it to
+# ~/.config/mise/config.local.toml instead of here - it's a sibling of the resolved
+# global config path, auto-merged on top, and lives outside the repo entirely so it's
+# untracked by construction. Add a tool with:
+#   mise use -p ~/.config/mise/config.local.toml <tool>
+# (`mise use -g --env local <tool>` does NOT target this file - it writes a
+# cwd-relative project mise.local.toml instead, which is a different mechanism.)
 
 [tools]
 fzf = "latest"
