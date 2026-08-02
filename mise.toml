@@ -1,0 +1,47 @@
+# mise global config - tracked here, symlinked to ~/.config/mise/config.toml (see [dotfiles]).
+#
+# Dotfile sources use absolute ~/.dotfiles/... paths, not relative ones: relative sources
+# resolve against the literal path mise was invoked with, which breaks once this file is
+# reached via the ~/.config/mise/config.toml symlink.
+#
+# For a machine-only tool that shouldn't show up as a repo diff, use
+# `mise use -g --env local <tool>` instead of `mise use -g` - it writes to the
+# gitignored mise.local.toml instead of this file.
+
+[tools]
+fzf = "latest"
+lazygit = "latest"
+neovim = "stable"
+starship = "latest"
+tmux = "latest"
+ripgrep = "latest"
+
+[bootstrap.repos]
+"~/.config/oh-my-zsh" = { url = "https://github.com/ohmyzsh/ohmyzsh.git" }
+
+# oh-my-tmux is NOT a [bootstrap.repos] entry: we force-symlink tmux.conf.local
+# into that clone's working tree below, which permanently makes the clone look
+# "dirty" to git - and mise's repos step refuses to converge a dirty target.
+# Cloning it here instead keeps the step idempotent (skips once .git exists).
+[bootstrap.hooks.pre-dotfiles]
+run = [
+  "git -C ~/.dotfiles submodule update --init --recursive",
+  "[ -d ~/.config/tmux/.git ] || git clone https://github.com/gpakosz/.tmux.git ~/.config/tmux",
+  "ln -sf ~/.config/tmux/.tmux.conf ~/.config/tmux/tmux.conf",
+]
+
+[bootstrap.user]
+login_shell = "/usr/bin/zsh"
+
+[dotfiles]
+"~/.config/mise/config.toml" = "~/.dotfiles/mise.toml"
+"~/.zshrc" = "~/.dotfiles/zsh/zshrc"
+"~/.config/zsh" = "~/.dotfiles/zsh"
+"~/.config/bat" = "~/.dotfiles/bat"
+"~/.config/alacritty" = "~/.dotfiles/alacritty"
+"~/.config/starship.toml" = "~/.dotfiles/starship/starship.toml"
+"~/.config/tig/config" = "~/.dotfiles/tig/config"
+"~/.config/git" = "~/.dotfiles/git"
+"~/.config/ulauncher" = "~/.dotfiles/ulauncher"
+"~/.config/zathura" = "~/.dotfiles/zathura"
+"~/.config/tmux/tmux.conf.local" = "~/.dotfiles/tmux/tmux.conf.local"
