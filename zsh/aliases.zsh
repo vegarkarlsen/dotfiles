@@ -19,12 +19,24 @@ alias vim="nvim"
 # alias mutt="neomutt"
 
 
-# Edit config files
-alias edit-nvim="cd $HOME/.config/nvim; $EDITOR . && cd -"
-alias edit-zenv="cd $HOME/.config/zsh; $EDITOR env.zsh; source env.zsh && cd -"
-alias edit-zsh="cd; $EDITOR .zshrc; source zshrc && cd -"
-alias edit-aliases="cd $HOME/.config/zsh; $EDITOR aliases.zsh; source aliases.zsh && cd -"
-alias edit-local-aliases="$EDITOR $LOCAL_ALIASES && source $LOCAL_ALIASES"
+# Edit config files - functions, not aliases: $EDITOR/$LOCAL_ALIASES aren't set yet
+# when this file is sourced (aliases.zsh loads before env.zsh/zshrc alphabetically),
+# so a double-quoted alias would bake in an empty value permanently.
+edit-nvim(){
+    cd "$HOME/.config/nvim"; $EDITOR . && cd -
+}
+edit-zenv(){
+    cd "$HOME/.config/zsh"; $EDITOR env.zsh; source env.zsh && cd -
+}
+edit-zsh(){
+    cd; $EDITOR .zshrc; source zshrc && cd -
+}
+edit-aliases(){
+    cd "$HOME/.config/zsh"; $EDITOR aliases.zsh; source aliases.zsh && cd -
+}
+edit-local-aliases(){
+    $EDITOR "$LOCAL_ALIASES" && source "$LOCAL_ALIASES"
+}
 
 alias malias='edit-aliases'
 alias maliasl="edit-local-aliases"
