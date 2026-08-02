@@ -9,3 +9,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Starship config file
 STARSHIP_CONFIG="$HOME/.config/starship.toml"
+
+# mise global config - tracked in dotfiles, symlinked to ~/.config/mise/config.toml
+export MISE_GLOBAL_CONFIG_FILE="$HOME/.config/mise/config.toml"

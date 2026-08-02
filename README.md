@@ -3,16 +3,18 @@
 
 ## install
 
-```
-git clone https://github.com/vegarkarlsen/dotfiles.git $HOME/.dotfiles
-cd $HOME/.dotfiles
-./install
-```
-### Change defualt shell to zsh
+Requires [mise](https://mise.jdx.dev/) to already be installed (`curl https://mise.run | sh`).
 
 ```
-chsh -s $(which zsh)
+git clone https://github.com/vegarkarlsen/dotfiles.git $HOME/.dotfiles
+MISE_GLOBAL_CONFIG_FILE="$HOME/.dotfiles/mise.toml" mise bootstrap
 ```
+
+This clones/updates external repos (oh-my-zsh, oh-my-tmux), initializes submodules,
+symlinks every dotfile into place (including `mise.toml` itself, into
+`~/.config/mise/config.toml`), sets zsh as the login shell, and installs the pinned
+CLI tools. Safe to re-run; see `mise bootstrap status` / `mise bootstrap --dry-run`
+to preview first.
 
 ### Font
 
