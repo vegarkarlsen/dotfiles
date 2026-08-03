@@ -13,7 +13,7 @@
 [submodule "tokyonight.nvim"]
 	path = tokyonight.nvim
 	; url = git@github.com:folke/tokyonight.nvim.git
-	url = https://@github.com/folke/tokyonight.nvim.git
+	url = https://github.com/folke/tokyonight.nvim.git
 [submodule "alacritty/alacritty-theme"]
 	path = alacritty/alacritty-theme
-	url = git@github.com:alacritty/alacritty-theme.git
+	url = https://github.com:alacritty/alacritty-theme.git

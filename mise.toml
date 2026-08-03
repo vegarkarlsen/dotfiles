@@ -19,6 +19,7 @@ neovim = "stable"
 starship = "latest"
 tmux = "latest"
 ripgrep = "latest"
+uv = "latest"
 
 [bootstrap.repos]
 "~/.config/oh-my-zsh" = { url = "https://github.com/ohmyzsh/ohmyzsh.git" }
