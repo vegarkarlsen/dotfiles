@@ -7,7 +7,7 @@ Requires [mise](https://mise.jdx.dev/) to already be installed (`curl https://mi
 
 ```
 git clone https://github.com/vegarkarlsen/dotfiles.git $HOME/.dotfiles
-MISE_GLOBAL_CONFIG_FILE="$HOME/.dotfiles/mise.toml" mise bootstrap
+MISE_GLOBAL_CONFIG_FILE="$HOME/.dotfiles/mise.toml" $HOME/.local/bin/mise bootstrap
 ```
 
 This clones/updates external repos (oh-my-zsh, oh-my-tmux), initializes submodules,
